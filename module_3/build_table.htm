@@ -44,7 +44,7 @@
         for (let value of values) {
             const td = document.createElement("td");
             td.textContent = value;
-            if (Number(value)) {
+            if (typeof value === "number") {
                 td.style.textAlign = "right"
             }
 
@@ -55,6 +55,13 @@
     })
 
     const mountainsEl = document.getElementById("mountains");
+
+    table.style.borderCollapse = "collapse";
+    table.style.width = "100%";
+    table.querySelectorAll("td, th").forEach(cell => {
+        cell.style.padding = "8px";
+        cell.style.border = "1px solid #ddd";
+    });
 
     mountainsEl.appendChild(table)
     
