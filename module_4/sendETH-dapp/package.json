@@ -1,0 +1,19 @@
+{
+  "name": "sendeth-dapp",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.0.1"
+  },
+  "dependencies": {
+    "@metamask/detect-provider": "^2.0.0",
+    "browserify": "^17.0.1",
+    "ethers": "5.7"
+  }
+}

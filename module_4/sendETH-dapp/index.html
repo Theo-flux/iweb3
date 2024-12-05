@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/detect.js"></script>
+    <script type="module" src="/src/transaction.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <nav class="navbar">
+        <h3>SendEth dApp</h3>
+        <div class="">
+          <button id="connectBtn">Connect</button>
+          <button class="account"  id="showAccount"></button>
+        </div>
+       
+      </nav>
+
+      <div class="info_section">
+        <input id="accountBal" type="text" disabled placeholder="Wallet balance"/>
+
+        <form id="formAmt">
+          <input id="inputReceiver" type="text" placeholder="receiver" required/>
+          <input id="inputAmt" type="number" min="0" placeholder="amt" required/>
+          <small id="errorEl"></small>
+          <button id="transferBtn" type="button">Transfer</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
