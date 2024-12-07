@@ -17,6 +17,8 @@ if (window.ethereum == null) {
 
 const connectBtnEl = document.getElementById("connectBtn");
 const showAcctEl = document.getElementById("showAccount");
+const inputBalanceEl = document.getElementById("accountBal");
+const formAmt =  document.getElementById("formAmt");
 
 
 export function fmtAddr() {
@@ -45,17 +47,6 @@ function updateWalletBalance() {
       inputAmt.max = walletBalance
       formAmt.style.display = "flex"
     }).catch((err) => console.error(err))
-}
-
-export async function getAmtTransferable() {
-  try {
-    const res = await provider.getGasPrice()
-    gasPrice = res
-    return walletBalance - (21000 * res.toNumber()/1e18);
-  } catch (error) {
-    console.error("unable to get amount transferable.")
-  }
-
 }
 
 async function initializeOnConnect(accounts) {
